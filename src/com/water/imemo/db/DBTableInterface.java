@@ -1,0 +1,1 @@
+package com.water.imemo.db;import android.database.sqlite.SQLiteDatabase;public interface DBTableInterface {		public void onInit(SQLiteDatabase database);	public void onUpgrade(SQLiteDatabase database,int newVersion,int oldVersion);}

@@ -7,13 +7,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
 import com.water.imemo.R;
+import com.water.imemo.db.DBUtils;
 import com.water.imemo.utils.Constants;
 import com.water.imemo.utils.MemoApp;
 
@@ -32,18 +31,18 @@ public class IndexActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_index);
 		
-		//¿ÉÒÔÀûÓÃtimetaskäÖÈ¾Ò³Ãæ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½timetaskï¿½ï¿½È¾Ò³ï¿½ï¿½
 		Message mesg = new Message();
 		mesg.what = 1;
 		handler.sendMessage(mesg);
 		
-		// Æô¶¯serviceÈç¹ûÓÐµÄ»°
+		// ï¿½ï¿½ï¿½ï¿½serviceï¿½ï¿½ï¿½ï¿½ÐµÄ»ï¿½
 		
-		// Êý¾Ý¿â³õÊ¼»¯
+		// ï¿½ï¿½Ý¿ï¿½ï¿½Ê¼ï¿½ï¿½
+		DBUtils.getInstance().initDB();
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
 		
-		// ½çÃæ³õÊ¼»¯
-		
-		//±£´æ°²×°Ê±¼ä
+		//ï¿½ï¿½ï¿½æ°²×°Ê±ï¿½ï¿½
 		if(app.getLong(Constants.APP_FIRST_TIME_INSTALL) == 0){
 			app.setLong(Constants.APP_FIRST_TIME_INSTALL,System.currentTimeMillis());
 		}

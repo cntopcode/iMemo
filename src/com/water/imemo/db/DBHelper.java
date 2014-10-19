@@ -1,4 +1,4 @@
-package com.water.imemo.utils;
+package com.water.imemo.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

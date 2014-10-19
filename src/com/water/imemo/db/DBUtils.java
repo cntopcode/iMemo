@@ -1,4 +1,9 @@
-package com.water.imemo.utils;
+package com.water.imemo.db;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.water.imemo.utils.MemoApp;
 
 import android.database.sqlite.SQLiteDatabase;
 
@@ -10,6 +15,8 @@ public class DBUtils {
 	
 	private static DBUtils instance;
 	
+	private List<DBTableInterface> tableList;
+	
 	public static DBUtils getInstance(){
 		instance = new DBUtils();
 		return instance;
@@ -18,10 +25,19 @@ public class DBUtils {
 	private DBUtils(){
 		DBHelper helper = new DBHelper(MemoApp.getInstance(), DB_NAME);
 		sqLiteDatabase = helper.getWritableDatabase();
+		tableList = new ArrayList<DBTableInterface>();
+		tableList.add(new TableMyMemo());
 	}
 	
 	public SQLiteDatabase getDataBase(){
 		return sqLiteDatabase;
 	}
 	
+	public void initDB(){
+		
+		for(DBTableInterface table:tableList){
+			table.onInit(getDataBase());
+		}
+		
+	}
 }
