@@ -1,0 +1,1 @@
+package com.water.imemo.activities;import android.app.Activity;public class MemoPageActivity extends Activity{}

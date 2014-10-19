@@ -21,7 +21,6 @@ public class DBHelper extends SQLiteOpenHelper {
 		this(context, name, null, VERSION);
 	}
 	
-	
 
 	@Override
 	public void onCreate(SQLiteDatabase arg0) {

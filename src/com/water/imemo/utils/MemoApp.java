@@ -22,7 +22,18 @@ public class MemoApp extends Application {
 		instance = this;
 		preference = getSharedPreferences(NAME, Context.MODE_PRIVATE);
 	}
-
+	
+	
+	
+	
+	public int getInt(String key,int def){
+		return preference.getInt(key, def);
+	}
+	
+	public void setInt(String key,int value){
+		preference.edit().putInt(key, value).commit();
+	}
+	
 	public String getString(String key,String def){
 		return preference.getString(key, def);
 	}
@@ -38,5 +49,7 @@ public class MemoApp extends Application {
 	public void setLong(String key, long value) {
 		preference.edit().putLong(key, value).commit();
 	}
+	
+	
 	
 }

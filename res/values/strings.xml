@@ -4,5 +4,6 @@
     <string name="app_name">iMemo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="editorDefaultHint">please input content!</string>
 
 </resources>
