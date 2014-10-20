@@ -10,17 +10,8 @@
 
 	
     
-    <EditText android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:id="@+id/memoEditor"
-        android:inputType="text"
-        android:text="@string/editorDefaultHint"
-        />
-    
-    <Button android:id="@+id/editorSaveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/editorSaveButtonText"/>
+    <ListView android:id="@+id/memoList"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"></ListView>
     
 </LinearLayout>

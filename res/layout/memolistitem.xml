@@ -6,21 +6,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-   	android:orientation="vertical">
+   	android:orientation="horizontal">
 
 	
     
-    <EditText android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:id="@+id/memoEditor"
-        android:inputType="text"
-        android:text="@string/editorDefaultHint"
-        />
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/memoSummary"
+        android:text="@string/dummy"/>
     
-    <Button android:id="@+id/editorSaveButton"
+    <TextView android:id="@+id/memoTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/editorSaveButtonText"/>
+        android:text="@string/dummy"/>
     
 </LinearLayout>
