@@ -1,4 +1,4 @@
-package com.water.imemo.activities;
+package com.water.imemo.ui.activities;
 
 import java.util.List;
 import java.util.Timer;
@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
@@ -21,7 +22,7 @@ import com.water.imemo.utils.Constants;
 import com.water.imemo.utils.MemoApp;
 
 public class IndexActivity extends Activity {
-	
+	private static final String TAG = IndexActivity.class.getSimpleName();
 	private MemoApp app = MemoApp.getInstance();
 	private TimerTask timerTask;
 	private final Timer timer = new Timer();
@@ -51,13 +52,16 @@ public class IndexActivity extends Activity {
 	private void initUI() {
 		TableMyMemo table = DBUtils.getInstance().getMyMemoDB();
 		List<MyMemo> list = table.getMemo(DBUtils.getInstance().getDataBase(), 0, 5);
+		Log.d(TAG, "size:"+list.size());
 		if(list.size() == 0){
 			Intent intent = new Intent(this,EditorActivity.class);
 			intent.putExtra("openType", Constants.NO_MEMO_START_EDITOR);
 			startActivity(intent);
 		}else{
-			
+			Intent intent = new Intent(this,MemoPageActivity.class);
+			startActivity(intent);
 		}
+		finish();
 	}
 
 	@Override

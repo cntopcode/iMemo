@@ -9,9 +9,21 @@
    	android:orientation="vertical">
 
 	
-    
+    <com.water.imemo.ui.layout.RefreshableView android:id="@+id/refreshList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
     <ListView android:id="@+id/memoList"
 	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"></ListView>
+	    android:layout_height="fill_parent">
+    </ListView>
+    
+    
+    </com.water.imemo.ui.layout.RefreshableView>	
+    
+    <Button android:id="@+id/memoListNewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/memoListNewButtonStr"/>
     
 </LinearLayout>

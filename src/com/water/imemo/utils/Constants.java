@@ -10,6 +10,7 @@ public class Constants {
 	
 	/* TYPE */
 	public static final String NO_MEMO_START_EDITOR = "NO_MEMO_START_EDITOR";
-	
+	public static final String NEW_MEMO_START_EDITOR = "NO_MEMO_START_EDITOR";
+	public static final String UPDATE_AT = "UPDATE_AT";
 	
 }

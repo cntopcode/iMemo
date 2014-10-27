@@ -14,8 +14,9 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:id="@+id/memoEditor"
-        android:inputType="text"
-        android:text="@string/editorDefaultHint"
+        android:inputType="text|textMultiLine"
+        android:textAlignment="viewStart"
+        android:hint="@string/editorDefaultHint"
         />
     
     <Button android:id="@+id/editorSaveButton"
